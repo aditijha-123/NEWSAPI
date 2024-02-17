@@ -31,7 +31,7 @@ useEffect(() => {
       <h1>Samachaar - Top Headlines</h1>
       <div className='row'>
 
-        {articles.map((articles => {
+        {articles && articles.map((articles => {
           return <div className="col-md-4" key={articles.url}>
             <Newsitem imageurl={!articles.urlToImage ? "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg" : articles.urlToImage} title={articles.title} description={articles.description}
               url={articles.url} />
